@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.portada{
+    width: 100% ;
+    height: 20vh;
+    margin: auto;
+    background:url(img/Lancuyen.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+
+}
+body{
+    background-color: rgba(26, 2, 2, 0.979);
+
+}
+
+section h1{
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration:underline;
+   
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) ;
+    grid-auto-rows: minmax(200px, auto) ;
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-radius: 10px;
+    transition:0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.grid-item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+    
+      
+}
+
+.iconos{
+    display: flex;
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 1rem;
+    justify-content:center;
+}
+
+footer{
+    
+    color: white;
+
+}
+
+.iconos a, p{
+    margin: 10px;
+}
+
+.derechos{
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center ;
+    font-size: 1rem;
+}
+
+.nombre, .redes{
+    color: rgb(79, 61, 243);
+}
+
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(0, 0,0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+}
+
+#fullimg{
+    width: 90%;
+    max-width: 600px;
+    
+}
+
+.full-img span{
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+
+}
+.redes{
+    font-size: 2rem;
+}
+
+@media (min-width: 680px) {
+.ancho{
+    grid-column:  span 2;
+}
+
+.alto{
+   grid-row: span 2; 
+}
+
+
+}
+
+@media (max-width: 680px) {
+
+   section h1{
+        
+        font-size: 1rem;
+    }
+
+    .derechos, .iconos{
+        font-size: 0.7rem;
+    }
+    
+}
